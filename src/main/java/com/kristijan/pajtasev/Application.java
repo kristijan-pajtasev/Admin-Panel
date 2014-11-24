@@ -25,6 +25,7 @@ public class Application implements WebApplicationInitializer {
         ServletRegistration.Dynamic dispatcher =
                 servletContext.addServlet("DispatcherServlet", new DispatcherServlet(webApplicationContext));
 
+
         dispatcher.addMapping("/*");
 //        dispatcher.addMapping("/static");
     }

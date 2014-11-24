@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Server admin panel" />
+        <meta name="keywords" content="HTML,CSS,HTML,JavaScript,Twitter Bootstrap,SpringMVC,Java" />
+        <meta name="author" content="Kristijan Pajtasev" />
+
+        <title>File browser</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
+
+        <style rel="stylesheet" type="text/css">
+            body {
+                background-color: #000;
+            }
+
+            form {
+                width: 40%;
+                margin: 50px auto;
+                background-color: #fff;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            form input {
+                margin: 10px 0;
+            }
+
+            form input[type=text], form input[type=password] {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="login" method="post">
+            <fieldset>
+                <legend>Login</legend>
+
+                <div th:if="${param.logout}" class="alert alert-success">
+                    You have been logged out.
+                </div>
+                <div class="input-control text">
+                    <input type="text" placeholder="Username" autofocus="true" name="username"/>
+                </div>
+                <div class="input-control text">
+                    <input type="password" placeholder="Password" name="password"/>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-default">Log in</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

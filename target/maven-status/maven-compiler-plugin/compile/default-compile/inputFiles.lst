@@ -1,4 +1,10 @@
+/home/kristijan/Documents/java/AdminPanel/src/main/java/com/kristijan/pajtasev/config/RootConfiguration.java
+/home/kristijan/Documents/java/AdminPanel/src/main/java/com/kristijan/pajtasev/model/LocalFolder.java
 /home/kristijan/Documents/java/AdminPanel/src/main/java/com/kristijan/pajtasev/config/AppConfig.java
 /home/kristijan/Documents/java/AdminPanel/src/main/java/com/kristijan/pajtasev/Application.java
+/home/kristijan/Documents/java/AdminPanel/src/main/java/com/kristijan/pajtasev/config/MessageSecurityWebApplicationInitializer.java
+/home/kristijan/Documents/java/AdminPanel/src/main/java/com/kristijan/pajtasev/config/SecurityConfig.java
 /home/kristijan/Documents/java/AdminPanel/src/main/java/com/kristijan/pajtasev/config/WebMvcConfig.java
 /home/kristijan/Documents/java/AdminPanel/src/main/java/com/kristijan/pajtasev/controller/MainController.java
+/home/kristijan/Documents/java/AdminPanel/src/main/java/com/kristijan/pajtasev/filters/TestInterceptor.java
+/home/kristijan/Documents/java/AdminPanel/src/main/java/com/kristijan/pajtasev/filters/TestFilter.java

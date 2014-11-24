@@ -1,8 +1,12 @@
 package com.kristijan.pajtasev.config;
 
+import com.kristijan.pajtasev.filters.TestInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.accept.ContentNegotiationManagerFactoryBean;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
@@ -15,13 +19,17 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 @EnableWebMvc
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        super.addInterceptors(registry);
+        registry.addInterceptor(new TestInterceptor());
+    }
+
     @Bean
     public ThymeleafViewResolver viewResolver() {
         ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
         viewResolver.setTemplateEngine(templateEngine());
         viewResolver.setOrder(1);
-//        String[] viewNames = {"*.html"};
-//        viewResolver.setViewNames(viewNames);
         return viewResolver;
     }
 
@@ -48,6 +56,13 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         templateEngine.addTemplateResolver(templateResolver());
 //        templateEngine.setMessageSource(messageSource());
         return templateEngine;
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        super.addResourceHandlers(registry);
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/");
     }
 
 }

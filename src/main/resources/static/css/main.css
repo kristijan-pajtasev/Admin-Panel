@@ -1,0 +1,78 @@
+.browserList {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.browserList>li {
+    margin: 5px;
+    width: 18%;
+    float:left;
+    cursor: pointer;
+    border: thin solid #000;
+}
+
+.browserList>li>i {
+    margin: 0 10px;
+}
+
+article {
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    background-color: #000;
+    z-index: 10;
+    box-shadow: 0px 0px 10px black;
+}
+
+nav>ul {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav>ul>li {
+    float: left;
+    height: 100%;
+    font-size: 16px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+nav>ul>li.right {
+    float: right;
+}
+
+ul>li.card{
+    border-radius: 10px;
+}
+
+ul>li.card>h4.footer {
+    width: 100%;
+    background-color: #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0px;
+    padding: 5px;
+    white-space: nowrap;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+ul>li.card>div.content {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+}
+
