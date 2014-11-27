@@ -21,6 +21,15 @@ import com.kristijan.pajtasev.model.LocalFolder;
 @Controller
 public class MainController {
 
+    @Autowired
+    private UserRepository userRepository;
+
+    @RequestMapping(value = "/users", method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseEntity getUsers(){
+        return new ResponseEntity(userRepository.findAll(), HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/content", method = RequestMethod.POST)
     @ResponseBody
     public ResponseEntity<List<LocalFolder>> content(HttpServletRequest request, @RequestBody String path) {
